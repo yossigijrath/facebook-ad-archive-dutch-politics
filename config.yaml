@@ -1,0 +1,85 @@
+# This access_token is a User access token w/ permission to access API
+access_token: EAAO7lXXdI9kBAKnY28UbciVTpqppNGn13ZC6WPsWKqdxZAALI7G5lSktWsycb8lOnmkemVbN0QkPh9Gm4GK3RucadQPUMkZA9y0POghWUEgxJeo8nv8nJJrpiilA1AIhTTMAZBYTDX36zSvkvFMRL79kZAF1d4dpi0KZCiBRNXErGZCB0xoOAZBW8McrZBtmnEaHoX6dDtt73Hz0fej6sPsMFY5XZBtpVJUkLsYkyfldOCDQIVWbm7Evmh4TlU6y2KrK0ZD
+page_total: 1000   # Should be a maximum of 1,000
+search_total: 10000   # You can query a maximum of 5,000 ads
+
+ad_active_status: ALL   # ACTIVE, INACTIVE, or ALL
+
+
+
+# Fields for querying all possible metadata from the API
+query_fields:
+  - ad_creation_time
+  - ad_creative_body
+  - ad_creative_link_caption
+  - ad_creative_link_description
+  - ad_creative_link_title
+  - ad_delivery_start_time
+  - ad_delivery_stop_time
+  - ad_snapshot_url
+  - demographic_distribution
+  - funding_entity
+  - impressions
+  - page_id
+  - page_name
+  - region_distribution
+  - spend
+  - spend_lower_bound
+  - spend_upper_bound
+
+# Fields which are included in the main CSV, including derived fields
+output_fields:
+  - ad_id
+  - page_id
+  - page_name
+  - ad_creative_body
+  - ad_creative_link_caption
+  - ad_creative_link_description
+  - ad_creative_link_title
+  - ad_delivery_start_time
+  - ad_delivery_stop_time
+  - ad_creation_time
+  - funding_entity
+  - impressions_min
+  - impressions_max
+  - spend_min
+  - spend_max
+  - ad_url
+
+# Fields for the unnested CSVs
+demo_fields:
+  - ad_id
+  - age
+  - gender
+  - percentage
+
+region_fields:
+  - ad_id
+  - region
+  - percentage
+
+demo_ages:
+  - 18-24
+  - 25-34
+  - 35-44
+  - 45-54
+  - 55-64
+  - 65+
+
+demo_genders:
+  - male
+  - female
+
+regions:
+  - Noord-Holland
+  - Zuid-Holland
+  - Flevoland
+  - Noord-Brabant
+  - Gelderland
+  - Zeeland
+  - Friesland
+  - Utrecht
+  - Drenthe
+  - Limburg
+  - Groningen
+  - Overijssel
